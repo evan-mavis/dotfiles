@@ -1,0 +1,230 @@
+{
+  // ===========================================
+  // APPEARANCE & THEMING
+  // ===========================================
+  "workbench.colorTheme": "Aura Dark",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.sideBar.location": "right",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#00000000",
+    "editor.findMatchBackground": "#ff000066",
+    "editor.findMatchHighlightBackground": "#ff000033",
+    "editor.selectionBackground": "#ff000033",
+    "editor.selectionHighlightBackground": "#ff000033"
+    // Window customization (transparent)
+  },
+  "window.titleBarStyle": "custom",
+  "window.systemColorTheme": "dark",
+  "window.autoDetectColorScheme": false,
+  "vscode_vibrancy.opacity": -1,
+  "vscode_vibrancy.forceFramelessWindow": true,
+  "breadcrumbs.enabled": false,
+
+  // ===========================================
+  // EDITOR SETTINGS
+  // ===========================================
+  "editor.fontFamily": "'Dank Mono', Ubuntu Mono derivative Powerline",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 1.5,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.cursorSurroundingLines": 15,
+  "editor.linkedEditing": true,
+  "editor.mouseWheelZoom": true,
+
+  // Smooth scrolling
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+
+  // Formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // Syntax highlighting (underline types)
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["entity.name.type", "support.type", "support.class"],
+        "settings": {
+          "fontStyle": "underline"
+        }
+      }
+    ]
+  },
+
+  // ===========================================
+  // TERMINAL SETTINGS
+  // ===========================================
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "Ubuntu Mono derivative Powerline",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.smoothScrolling": true,
+
+  // ===========================================
+  // LANGUAGE-SPECIFIC SETTINGS
+  // ===========================================
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // ===========================================
+  // GIT SETTINGS
+  // ===========================================
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+
+  // ===========================================
+  // DIFF EDITOR SETTINGS
+  // ===========================================
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // ===========================================
+  // VIM SETTINGS
+  // ===========================================
+  "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "vim.ignorecase": true,
+
+  // Highlighted yank
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 250,
+  "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+
+  // Vim key bindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Buffer navigation
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+
+    // Window management
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["leader", "s"],
+      "commands": [":split"]
+    },
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+
+    // LSP navigation
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["g", "p", "d"],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "p", "i"],
+      "commands": ["editor.action.peekImplementation"]
+    },
+    {
+      "before": ["g", "q"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+
+    // Code actions
+    {
+      "before": ["leader", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["leader", "r"],
+      "commands": ["editor.action.rename"]
+    },
+
+    // File operations
+    {
+      "before": ["leader", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "F"],
+      "commands": ["workbench.action.showAllEditors"]
+    },
+    {
+      "before": ["leader", "/"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+
+    // Select all
+    {
+      "before": ["leader", "a"],
+      "after": ["g", "g", "V", "G"]
+    },
+
+    // Git operations
+    {
+      "before": ["leader", "g", "s"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["leader", "g", "g"],
+      "commands": [
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "lazygit\r"
+          }
+        }
+      ]
+    }
+  ],
+
+  // ===========================================
+  // ERROR LENS SETTINGS
+  // ===========================================
+  "errorLens.enabled": true,
+  "errorLens.messageEnabled": true,
+  "errorLens.statusBarMessageEnabled": true,
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.excludeBySource": [],
+  "errorLens.followCursor": "activeLine",
+  "errorLens.messageTemplate": "$severity $message $source ($code)"
+}
