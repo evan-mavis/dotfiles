@@ -1,33 +1,16 @@
 {
-  // ===========================================
-  // APPEARANCE & THEMING
-  // ===========================================
-  "workbench.colorTheme": "Aura Dark",
+  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "catppuccin-frappe",
   "workbench.sideBar.location": "right",
-  "workbench.colorCustomizations": {
-    "terminal.background": "#00000000",
-    "editor.findMatchBackground": "#ff000066",
-    "editor.findMatchHighlightBackground": "#ff000033",
-    "editor.selectionBackground": "#ff000033",
-    "editor.selectionHighlightBackground": "#ff000033"
-    // Window customization (transparent)
-  },
-  "window.titleBarStyle": "custom",
-  "window.systemColorTheme": "dark",
-  "window.autoDetectColorScheme": false,
-  "vscode_vibrancy.opacity": -1,
-  "vscode_vibrancy.forceFramelessWindow": true,
   "breadcrumbs.enabled": false,
 
   // ===========================================
   // EDITOR SETTINGS
   // ===========================================
-  "editor.fontFamily": "'Dank Mono', Ubuntu Mono derivative Powerline",
-  "editor.fontSize": 16,
-  "editor.lineHeight": 1.5,
+  "editor.fontFamily": "'0xProto Nerd Font Mono', Ubuntu Mono derivative Powerline",
   "editor.lineNumbers": "relative",
-  "editor.minimap.enabled": false,
+  "editor.fontSize": 12,
+  "editor.lineHeight": 1.5,
   "editor.cursorSurroundingLines": 15,
   "editor.linkedEditing": true,
   "editor.mouseWheelZoom": true,
@@ -57,9 +40,7 @@
   // TERMINAL SETTINGS
   // ===========================================
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontFamily": "Ubuntu Mono derivative Powerline",
-  "terminal.integrated.fontSize": 18,
-  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.smoothScrolling": true,
 
   // ===========================================
@@ -226,5 +207,8 @@
   "errorLens.gutterIconsEnabled": true,
   "errorLens.excludeBySource": [],
   "errorLens.followCursor": "activeLine",
-  "errorLens.messageTemplate": "$severity $message $source ($code)"
+  "errorLens.messageTemplate": "$severity $message $source ($code)",
+  "terminal.integrated.gpuAcceleration": "off",
+  "window.systemColorTheme": "dark",
+  "window.autoDetectColorScheme": false
 }
